@@ -1,15 +1,12 @@
+import Condicional from './components/Condicional';
 import './components/estilos/App.sass'
-import Evento from './components/Evento';
-import Form from './components/Form';
 
 const App: React.FC = () => {
   return (
 
     <div className='App'>
-      <h1>TESTANDO EVENTOS</h1>
-      <Evento numero = "1" />
-      <Evento numero = "2" />
-      <Form />
+      <h1>RENDERIZAÇÃO CONDICIONAL</h1>
+      <Condicional />
     </div>
   );
 }
