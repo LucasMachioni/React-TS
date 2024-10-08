@@ -1,4 +1,4 @@
-interface PessoaProps {
+interface pessoaProps {
     nome: string;
     idade: string;
     profissao: string;
@@ -6,7 +6,7 @@ interface PessoaProps {
 }
 
 
-const Pessoa: React.FC<PessoaProps> = ({nome, idade, profissao, foto}) => {
+const Pessoa: React.FC<pessoaProps> = ({nome, idade, profissao, foto}) => {
     return (
 
     <>
