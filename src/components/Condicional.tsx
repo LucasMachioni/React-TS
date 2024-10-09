@@ -2,19 +2,27 @@ import { useState } from "react"
 
 const Condicional: React.FC = () => {
 
-    const [email, setEmail] = useState<string>('olá')
+    const [email, setEmail] = useState<string>('')
+    const [userEmail, setUserEmail] = useState<string>('')
 
     //para chamar no onchange e fazer a alteração do email
     const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(e.target.value);
     }
     
+    const emailUserChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setUserEmail(e.target.value)
+    }
+
     //para captar algo do envio do formulario ao inves de "enivar para o back-end"
     const enviarEmail = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault()
-        console.log("Teste");
-        console.log({email})
-        
+        setUserEmail(email)
+        console.log(userEmail)
+    }
+
+    const limparEmail = () => {
+        setUserEmail('');
     }
 
     return (
@@ -25,6 +33,14 @@ const Condicional: React.FC = () => {
                 <button type="submit" onClick={enviarEmail}>
                     Enviar e-mail
                 </button>
+                
+                
+                {userEmail && ( //se user e-mail tiver algo --> && faça tal coisa
+                    <div>
+                        <p>O e-mail do usuário é: {userEmail}</p>
+                        <button onClick={limparEmail}>Limpar e-mail</button>
+                    </div>
+                )}
             </form>
         </div>
     )

@@ -1,12 +1,15 @@
-import Condicional from './components/Condicional';
 import './components/estilos/App.sass'
+import { useState } from 'react';
+import SeuNome from './components/SeuNome';
 
 const App: React.FC = () => {
-  return (
 
+  const [nome, setNome] = useState<string>('')
+
+  return (
     <div className='App'>
-      <h1>RENDERIZAÇÃO CONDICIONAL</h1>
-      <Condicional />
+      <h1>State Lift</h1>
+      <SeuNome setNome={setNome}/>
     </div>
   );
 }
