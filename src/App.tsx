@@ -3,7 +3,7 @@ import Home from './pages/Home';
 import Empresa from './pages/Empresa';
 import Contato from './pages/Contato';
 import NavBar from './components/Navbar';
-import Footer from './components/layout/footer';
+import Footer from './components/layout/Footer';
 
 const App: React.FC = () => {
 
@@ -16,7 +16,6 @@ const App: React.FC = () => {
           <Route path='/empresa' element = {<Empresa />}/>
           
           <Route path='contato' element = {<Contato />}/>
-       
         </Routes>
         <Footer />
     </Router>

@@ -18,6 +18,6 @@ const Footer: React.FC = () => {
             <p>Nosso rodapé</p>
         </footer>
     )
-}
+} 
 
 export default Footer
